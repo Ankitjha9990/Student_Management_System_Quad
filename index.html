@@ -1,133 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Management System</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <title>Student Management System | Login </title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+  <link rel="shortcut icon" href="Favicon.svg" type="image/x-icon">
 </head>
-
 <body>
 
-    <div class="app-container">
-        <header>
-            <h1><i class="fa-solid fa-graduation-cap"></i> Student Management System</h1>
-            <p>Manage your students efficiently</p>
-        </header>
 
-        <main>
-            <!-- Toggle Button -->
-            <div class="toggle-btn-container">
-                <button id="toggleFormBtn" class="btn btn-primary">
-                    <i class="fa-solid fa-plus"></i> Add New Student
-                </button>
-            </div>
 
-            <!-- Add/Edit Student Form -->
-            <section class="form-section hidden" id="formSection">
-                <div class="card">
-                    <div class="card-header">
-                        <h2><i class="fa-solid fa-user-plus"></i> Student Details</h2>
-                        <button type="button" id="closeFormBtn" class="btn btn-close">X</button>
-                    </div>
-                    <div class="card-body">
-                        <form id="studentForm">
-                            <input type="hidden" id="editIndex">
+  <div class="container">
+    
+    <div class="form-box">
+      <h2>Login Now</h2>
+      <p>Hey! Nice to see you again.</p>
 
-                            <div class="form-grid">
-                                <div class="form-group">
-                                    <label for="studentId">Student ID</label>
-                                    <input type="number" id="studentId" placeholder="e.g. 1001" required>
-                                </div>
+      <form>
+        <label>Admin Id</label>
+        <br>
+        <input type="text" placeholder="Enter your Id" required><br><br>
 
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" placeholder="Full Name" required>
-                                </div>
+        <label>Admin Email</label>
+        <br>
+        <input type="email" placeholder="Enter your email" required><br><br>
 
-                                <div class="form-group">
-                                    <label for="class">Class</label>
-                                    <input type="text" id="class" placeholder="e.g. 10" required>
-                                </div>
+        <label>Password</label>
+        <br>
+        <input type="password" placeholder="Enter your password" required><br><br>
 
-                                <div class="form-group">
-                                    <label for="section">Section</label>
-                                    <input type="text" id="section" placeholder="e.g. A" required>
-                                </div>
+        <input type="checkbox" required> I agree to Terms & Conditions<br><br>
 
-                                <div class="form-group">
-                                    <label for="dob">Date of Birth</label>
-                                    <input type="date" id="dob" required>
-                                </div>
+        <button type="submit">Login as Admin</button><br><br>
 
-                                <div class="form-group">
-                                    <label for="phone">Phone Number</label>
-                                    <input type="tel" id="phone" placeholder="10-digit Mobile Number" pattern="\d{10}"
-                                        required>
-                                </div>
-
-                                <div class="form-group full-width">
-                                    <label for="aadhar">Aadhar No</label>
-                                    <input type="text" id="aadhar" placeholder="12-digit Aadhar Number" required
-                                        pattern="\d{12}" title="Please enter exactly 12 digits">
-                                </div>
-                            </div>
-
-                            <div class="form-actions">
-                                <button type="submit" class="btn btn-primary" id="submitBtn">
-                                    <i class="fa-solid fa-plus"></i> Add Student
-                                </button>
-                                <button type="button" class="btn btn-secondary" id="resetBtn" onclick="resetForm()">
-                                    <i class="fa-solid fa-rotate-right"></i> Reset
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Student List Table -->
-            <section class="table-section">
-                <div class="card">
-                    <div class="card-header">
-                        <h2><i class="fa-solid fa-list"></i> Student List (<span id="studentCount">0</span>)</h2>
-                    </div>
-                    <div class="card-body scrollable-table">
-                        <table id="studentTable">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Class</th>
-                                    <th>Section</th>
-                                    <th>DOB</th>
-                                    <th>Phone</th>
-                                    <th>Aadhar No</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Rows will be added here dynamically -->
-                            </tbody>
-                        </table>
-                        <div id="noData" class="no-data">
-                            No students added yet.
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2025 Student Management System</p>
-        </footer>
+      </form>
     </div>
 
-    <!-- Main JavaScript -->
-    <script src="script.js"></script>
-</body>
 
+    <div class="image-box">
+      <img src="assests/login.jpg" alt="Login Side Image">
+    </div>
+
+  </div>
+
+<video autoplay muted loop id="bgVideo">
+  <source src="assests/Background_Video.mp4" type="video/mp4">
+</video>
+
+<script>
+  const formBox = document.querySelector('form');
+
+  formBox.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    if (formBox.checkValidity()) {
+      window.location.href = "login.html";
+    } else {
+      alert("Please fill out all fields correctly.");
+    }
+  });
+</script>
+
+</body>
 </html>
