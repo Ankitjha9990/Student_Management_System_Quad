@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Management System | Login </title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+  <link rel="shortcut icon" href="Favicon.svg" type="image/x-icon">
+</head>
+<body>
+
+
+
+  <div class="container">
+    
+    <div class="form-box">
+      <h2>Login Now</h2>
+      <p>Hey! Nice to see you again.</p>
+
+      <form>
+        <label>Admin Id</label>
+        <br>
+        <input type="text" placeholder="Enter your Id" required><br><br>
+
+        <label>Admin Email</label>
+        <br>
+        <input type="email" placeholder="Enter your email" required><br><br>
+
+        <label>Password</label>
+        <br>
+        <input type="password" placeholder="Enter your password" required><br><br>
+
+        <input type="checkbox" required> I agree to Terms & Conditions<br><br>
+
+        <button type="submit">Login as Admin</button><br><br>
+
+      </form>
+    </div>
+
+
+    <div class="image-box">
+      <img src="assests/login.jpg" alt="Login Side Image">
+    </div>
+
+  </div>
+
+<video autoplay muted loop id="bgVideo">
+  <source src="assests/Background_Video.mp4" type="video/mp4">
+</video>
+
+<script>
+  const formBox = document.querySelector('form');
+
+  formBox.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    if (formBox.checkValidity()) {
+      window.location.href = "index.html";
+    } else {
+      alert("Please fill out all fields correctly.");
+    }
+  });
+</script>
+
+</body>
+</html>
