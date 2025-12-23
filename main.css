@@ -95,20 +95,91 @@ a {
   border-bottom-left-radius: 2%;
 }
 
-/* Media Query for screens less than 768px */
-@media (max-width: 768px) {
+/* Media Queries for Mobile and Tablet Devices */
+
+/* Extra small devices (phones, 320px and up) */
+@media only screen and (max-width: 480px) {
   .container {
-    width: 90%;
-    margin: 20px auto;
-    justify-content: center;
+    width: 95%  ;
+    margin: 10px auto  ;
+    flex-direction: column  ;
   }
 
   .form-box {
-    width: 100%;
-    padding: 30px;
+    width: 95%  ;
+    padding: 20px  ;
   }
 
   .image-box {
-    display: none ;
+    display: none  ;
+    width: 0  ;
+    height: 0  ;
+    visibility: hidden  ;
+    opacity: 0  ;
+  }
+}
+
+/* Small devices (phones, 480px to 600px) */
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+  .container {
+    width: 90%  ;
+    margin: 15px auto  ;
+    flex-direction: column  ;
+  }
+
+  .form-box {
+    width: 90%  ;
+    padding: 25px  ;
+  }
+
+  .image-box {
+    display: none  ;
+    width: 0  ;
+    height: 0  ;
+    visibility: hidden  ;
+    opacity: 0  ;
+  }
+}
+
+/* Medium devices (tablets, 600px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .container {
+    width: 85%  ;
+    margin: 20px auto  ;
+    flex-direction: column  ;
+  }
+
+  .form-box {
+    width: 85%  ;
+    padding: 30px  ;
+  }
+
+  .image-box {
+    display: none  ;
+    width: 0  ;
+    height: 0  ;
+    visibility: hidden  ;
+    opacity: 0  ;
+  }
+}
+
+/* Large tablets and small laptops (768px to 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 80%  ;
+    margin: 30px auto  ;
+  }
+
+  .form-box {
+    width: 80%  ;
+    padding: 35px  ;
+  }
+
+  .image-box {
+    display: none  ;
+    width: 0  ;
+    height: 0  ;
+    visibility: hidden  ;
+    opacity: 0  ;
   }
 }

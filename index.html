@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Management System | Login </title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
   <link rel="shortcut icon" href="Favicon.svg" type="image/x-icon">
 </head>
+
 <body>
 
 
 
   <div class="container">
-    
+
     <div class="form-box">
       <h2>Login Now</h2>
       <p>Hey! Nice to see you again.</p>
@@ -43,23 +47,24 @@
 
   </div>
 
-<video autoplay muted loop id="bgVideo">
-  <source src="assests/Background_Video.mp4" type="video/mp4">
-</video>
+  <video autoplay muted loop id="bgVideo">
+    <source src="assests/Background_Video.mp4" type="video/mp4">
+  </video>
 
-<script>
-  const formBox = document.querySelector('form');
+  <script>
+    const formBox = document.querySelector('form');
 
-  formBox.addEventListener('submit', function(event) {
-    event.preventDefault();
+    formBox.addEventListener('submit', function (event) {
+      event.preventDefault();
 
-    if (formBox.checkValidity()) {
-      window.location.href = "main.html";
-    } else {
-      alert("Please fill out all fields correctly.");
-    }
-  });
-</script>
+      if (formBox.checkValidity()) {
+        window.location.href = "main.html";
+      } else {
+        alert("Please fill out all fields correctly.");
+      }
+    });
+  </script>
 
 </body>
+
 </html>
