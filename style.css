@@ -174,7 +174,8 @@ tbody tr:nth-child(even) {
 .no-data {
   text-align: center;
   padding: 20px;
-  color: #d5d5d5;
+  color: #000000;
+  font-weight: 200;
   border: 1px solid #ddd;
   margin-top: 10px;
 }
@@ -184,7 +185,7 @@ footer {
   margin-top: 20px;
   padding: 20px;
   border-top: 1px solid #ddd;
-  color: #777;
+  color: #494747;
 }
 
 @media (max-width: 768px) {
