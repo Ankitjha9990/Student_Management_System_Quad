@@ -36,12 +36,12 @@ Each student record contains the following information:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/Student_Management_System.git
+   git clone https://github.com/Ankitjha9990/Student_Management_System_Quad
    ```
 
 2. **Navigate to the project directory**:
    ```bash
-   cd Student_Management_System
+   cd Student_Management_System_Quad
    ```
 
 3. **Open the application**:
